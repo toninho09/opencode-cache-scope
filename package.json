@@ -1,0 +1,55 @@
+{
+  "name": "@toninho09/opencode-cache-scope",
+  "version": "0.2.0",
+  "description": "opencode TUI sidebar panel with prompt cache hit rate and per-category cost for the current session",
+  "type": "module",
+  "license": "MIT",
+  "author": "toninho09",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./tui": "./dist/tui.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "sidebar",
+    "cache",
+    "prompt-caching",
+    "cost",
+    "usage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toninho09/opencode-cache-scope.git"
+  },
+  "homepage": "https://github.com/toninho09/opencode-cache-scope#readme",
+  "bugs": {
+    "url": "https://github.com/toninho09/opencode-cache-scope/issues"
+  },
+  "engines": {
+    "opencode": ">=1.18.0"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run typecheck && bun run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-typescript": "^7.27.1",
+    "@opencode-ai/plugin": "1.18.25",
+    "@opentui/core": "0.4.5",
+    "@opentui/solid": "0.4.5",
+    "babel-preset-solid": "^1.9.12",
+    "solid-js": "^1.9.12",
+    "typescript": "^5.9.3"
+  }
+}
